@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_optional_service_item"
+            android:background="@color/white_text_color"
+            android:padding="18dp">
+
+
+        <ImageView
+            android:id="@+id/rupee_symbol_optional_service_item"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/rupee_icon"
+            android:contentDescription="@string/rupee_symbol" />
+
+        <TextView
+            android:id="@+id/price_of_optional_service_textView_optional_service_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-2dp"
+            android:textColor="@color/colorSecondary"
+            android:text="@string/_0"
+            android:layout_toEndOf="@id/rupee_symbol_optional_service_item"
+            android:fontFamily="@font/font_din_medium"
+            android:textSize="19sp"/>
+
+        <TextView
+            android:id="@+id/label_of_optional_service_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_din_bold"
+            android:textColor="@color/color_selected_car"
+            android:text="@string/label"
+            android:layout_marginStart="10dp"
+            android:textSize="18sp"
+            android:layout_toEndOf="@id/price_of_optional_service_textView_optional_service_item"/>
+
+        <TextView
+            android:id="@+id/description_of_optional_service_optional_service_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_din_light"
+            android:textColor="@color/color_selected_car"
+            android:text="@string/description"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp"
+            android:layout_toEndOf="@id/price_of_optional_service_textView_optional_service_item"
+            android:layout_below="@id/label_of_optional_service_item"
+            />
+
+        <!--<ImageView
+            android:id="@+id/check_box_optional_service_item"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/check_box_unchecked"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:contentDescription="@string/check_box_optional_service_item" />
+-->
+
+                <CheckBox
+                    android:id="@+id/check_box_optional_service_item"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:gravity="center"
+                    android:layout_alignParentEnd="true"
+                    android:button="@drawable/checkbox" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f0f0f0"
+            android:layout_below="@id/layout_optional_service_item"/>
+
+
+
+</RelativeLayout>

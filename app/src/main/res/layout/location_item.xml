@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/map_location_item"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:background="@color/black_000000"
+        android:contentDescription="@string/map"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:cardElevation="1dp"
+        app:cardCornerRadius="0dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/white_text_color"
+            android:padding="10dp">
+        <TextView
+            android:id="@+id/label_of_location_location_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_of_location"
+            android:fontFamily="@font/font_din_medium"
+            android:textColor="@color/black_000000"
+            />
+        <TextView
+            android:id="@+id/address_location_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_of_location_location_item"
+            android:text="@string/address"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="50dp"
+            android:textColor="@color/black_000000"
+            android:fontFamily="@font/font_din_light"/>
+            <ImageView
+                android:id="@+id/radio_button_location_item"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/unselected_image_view_unchecked"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

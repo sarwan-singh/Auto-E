@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/auto_e_main_background"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/main_image_background_image" />
+
+        <include
+            layout="@layout/action_bar_navigation"
+            android:layout_height="0dp"
+            android:layout_margin="15dp"
+            android:id="@+id/action_bar_home_invisible"
+            android:layout_width="match_parent"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:layout_margin="15dp"
+            android:src="@drawable/burger_main"
+            android:id="@+id/menu_icon_home"
+            android:contentDescription="@string/menu_icon_burger" />
+
+        <include
+            layout="@layout/make_a_booking_button_home"
+            android:id="@+id/make_a_booking_button_home"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="115dp"/>
+
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/activity_home_nav_view"
+        android:layout_width="310dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/navigation_background"
+        android:layout_gravity="start"
+        android:theme="@style/drawerStyle"
+        app:itemIconTint="@drawable/navigation_bar_text_color"
+        app:itemTextColor="@drawable/navigation_bar_text_color"
+        app:headerLayout="@layout/navigation_bar_header_layout_unnamed"
+        app:menu="@menu/navigation_menu_activity_home"
+        >
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

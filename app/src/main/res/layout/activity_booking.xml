@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookingActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/recycler_background">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:background="@color/colorPrimary"
+            android:id="@+id/action_bar_booking"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/back_button_booking"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="40dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:longClickable="true"
+                android:contentDescription="@string/back_arrow_button"
+                android:src="@drawable/arrow_left"
+                />
+
+            <TextView
+                android:id="@+id/label_booking"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/font_din_bold"
+                android:gravity="center_vertical"
+                android:text="@string/booking_summary"
+                android:textColor="@color/white_text_color"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map_booking_activity"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/black_000000"
+            android:layout_below="@id/action_bar_booking"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/map_booking_activity"
+            android:id="@+id/booking_summary_layout"
+            app:cardCornerRadius="0dp"
+            android:elevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/rupee_imageView_booking_activity"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/rupee_icon"
+                android:layout_marginTop="17dp"
+                android:layout_marginStart="20dp"
+                android:contentDescription="@string/todo" />
+
+            <TextView
+                android:id="@+id/total_price_textView_booking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_din_regular"
+                android:textColor="@color/black_000000"
+                android:text="@string/_1234"
+                android:layout_marginTop="7dp"
+                android:layout_toEndOf="@id/rupee_imageView_booking_activity"
+                android:textSize="28sp"
+                android:layout_marginEnd="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/label_car_booking"
+                android:text="@string/label1"
+                android:fontFamily="@font/font_din_regular"
+                android:textColor="@color/black_000000"
+                android:layout_toEndOf="@id/total_price_textView_booking"
+                android:layout_marginTop="10dp"
+                android:textSize="32sp" />
+
+            <ImageView
+                android:id="@+id/edit_imageView_booking_summary"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="191dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/label_car_booking"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/edit2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/car_type_textView_car_booking"
+                android:text="@string/car_type"
+                android:fontFamily="@font/font_din_regular"
+                android:layout_below="@id/label_car_booking"
+                android:textColor="@color/black_000000"
+                android:layout_toEndOf="@id/total_price_textView_booking"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/package_textView_car_booking"
+                android:text="@string/package1"
+                android:fontFamily="@font/font_din_regular"
+                android:layout_below="@id/car_type_textView_car_booking"
+                android:textColor="@color/black_000000"
+                android:layout_toEndOf="@id/total_price_textView_booking"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/additional_package_textView_car_booking"
+                android:text="@string/additional_package"
+                android:fontFamily="@font/font_din_regular"
+                android:layout_below="@id/package_textView_car_booking"
+                android:textColor="@color/black_000000"
+                android:gravity="end"
+                android:layout_toEndOf="@id/total_price_textView_booking"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/car_type_value_car_booking"
+                android:text="@string/car_type"
+                android:fontFamily="@font/font_din_light"
+                android:layout_marginStart="20dp"
+                android:layout_below="@id/label_car_booking"
+                android:layout_toEndOf="@id/additional_package_textView_car_booking"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/package_value_car_booking"
+                android:text="@string/package1"
+                android:fontFamily="@font/font_din_light"
+                android:layout_below="@id/car_type_value_car_booking"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@id/additional_package_textView_car_booking"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/additional_package_value_car_booking"
+                android:text="@string/additional_package"
+                android:fontFamily="@font/font_din_light"
+                android:layout_below="@id/package_value_car_booking"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@id/additional_package_textView_car_booking"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/additional_package_value_car_booking"
+                android:background="#f2f3f4"/>
+
+
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/booking_summary_layout"
+            android:id="@+id/note_layout"
+            app:cardCornerRadius="0dp"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:elevation="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/note_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/mention_a_note_for_executive"
+                android:inputType="textLongMessage"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="18dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/font_din_regular"
+                android:layout_marginBottom="18dp"
+                tools:ignore="Autofill" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/note_editText"
+                android:background="#f2f3f4"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/save_button_add_a_car"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:visibility="visible"
+            android:background="@color/colorSecondary"
+            android:fontFamily="@font/font_din_bold"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="28dp"
+            android:padding="10dp"
+            android:text="@string/done"
+            android:textColor="@color/white_text_color" />
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

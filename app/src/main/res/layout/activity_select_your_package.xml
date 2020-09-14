@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectYourPackage">
+
+
+    <include
+        layout="@layout/layout_action_bar_select_your_package"
+        android:layout_height="62dp"
+        android:layout_width="match_parent"
+        android:id="@+id/action_bar_activity_select_your_package"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_bar_activity_select_your_package"
+        android:layout_above="@id/footer_select_your_package">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/recycler_background">
+            <TextView
+                android:id="@+id/textView_main_plans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/main_plans"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/font_din_regular"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_main_packages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView_main_plans"
+                android:layoutAnimation="@anim/layout_recycler_view_car_and_location_fall_down"
+                android:background="@color/white_text_color"/>
+            <TextView
+                android:id="@+id/textView_optional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_below="@id/recycler_view_main_packages"
+                android:layout_marginTop="2dp"
+                android:text="@string/optionals"
+                android:layout_marginBottom="2dp"
+                android:fontFamily="@font/font_din_regular"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_optional_plans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutAnimation="@anim/layout_recycler_view_car_and_location_fall_down"
+                android:layout_below="@id/textView_optional"
+                android:background="@color/white_text_color"
+                />
+
+
+        </RelativeLayout>
+    </ScrollView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/footer_select_your_package"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="1dp"
+        android:layout_alignParentBottom="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@color/white_text_color">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#f2f3f4"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/subtotal"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/subtotal_textView_select_your_package"
+                android:fontFamily="@font/font_din_bold"
+                android:textColor="@color/black_000000"
+                />
+            <ImageView
+                android:id="@+id/rupee_imageView_select_your_package"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/rupee_symbol_black"
+                android:layout_marginStart="8dp"
+                android:layout_below="@id/subtotal_textView_select_your_package"
+                android:contentDescription="@string/rupee_symbol_black_select_your_package" />
+
+            <TextView
+                android:id="@+id/subtotal_price_textView_select_your_package"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/rupee_imageView_select_your_package"
+                android:layout_below="@id/subtotal_textView_select_your_package"
+                android:text="@string/_0"
+                android:layout_marginTop="-10dp"
+                android:fontFamily="@font/font_din_bold"
+                android:textColor="@color/black_000000"
+                android:textSize="48sp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/next_button_select_your_package"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="25dp"
+                android:transitionName="next_make_a_booking_select_a_car_add_a_car"
+                android:elevation="5dp"
+                tools:ignore="RelativeOverlap">
+                <TextView
+                    android:id="@+id/next_textView_select_your_package"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="31dp"
+                    android:paddingRight="31dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:background="@color/colorSecondary"
+                    android:text="@string/select_date"
+                    android:textSize="18sp"
+                    android:textColor="@color/white_text_color"
+                    android:fontFamily="@font/font_din_medium"
+                    />
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectACar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/recycler_background">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:background="@color/colorPrimary"
+            android:id="@+id/action_bar_select_a_car"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/back_button_select_a_car"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="40dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:longClickable="true"
+                android:contentDescription="@string/back_arrow_button"
+                android:src="@drawable/arrow_left"
+                />
+
+            <TextView
+                android:id="@+id/label_select_a_car"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/font_din_bold"
+                android:gravity="center_vertical"
+                android:text="@string/select_a_car"
+                android:textColor="@color/white_text_color"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/no_car_animation"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:visibility="gone"
+            android:layout_marginTop="-200dp"
+            app:lottie_fileName="no_car_animation.json"
+            />
+
+
+
+        <TextView
+            android:id="@+id/no_car_text_select_a_car"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/no_car_animation"
+            android:layout_marginTop="30dp"
+            android:textSize="17sp"
+            android:visibility="gone"
+            android:fontFamily="@font/font_din_light"
+            android:gravity="center"
+            android:text="@string/looks_like_you_haven_t_added_any_cars_yet" />
+
+        <Button
+            android:id="@+id/add_a_car_select_a_car"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_a_car"
+            android:fontFamily="@font/font_din_bold"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:shadowRadius="5"
+            android:shadowDx="5"
+            android:visibility="gone"
+            android:shadowDy="5"
+            android:transitionName="next_make_a_booking_select_a_car_add_a_car"
+            android:textColor="@color/white_text_color"
+            android:background="@drawable/make_a_booking_button_home"/>
+
+
+        <ScrollView
+            android:id="@+id/layout_car_exists_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/action_bar_select_a_car"
+            android:layout_above="@id/layout_car_exist_select_a_car"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_car"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/add_a_car_button_select_a_car_with_car"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/recycler_view_car"
+                    app:cardElevation="8dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="27dp"
+                            android:layout_height="27dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginBottom="7dp"
+                            android:contentDescription="@string/add_a_car_icon"
+                            android:src="@drawable/add_booking_icon"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginBottom="7dp"
+                            android:fontFamily="@font/font_din_medium"
+                            android:textSize="19sp"
+                            android:textColor="@color/colorSecondary"
+                            android:text="@string/add_a_car"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layout_car_exist_select_a_car"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="1dp"
+            android:layout_alignParentBottom="true">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@color/white_text_color">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#f2f3f4"/>
+
+
+
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/next_button_select_a_car"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="25dp"
+                    android:transitionName="next_make_a_booking_select_a_car_add_a_car"
+                    android:elevation="5dp"
+                    tools:ignore="RelativeOverlap">
+                    <TextView
+                        android:id="@+id/next_textView_select_a_car"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="31dp"
+                        android:paddingRight="31dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:background="@color/colorSecondary"
+                        android:text="@string/next"
+                        android:textSize="18sp"
+                        android:textColor="@color/white_text_color"
+                        android:fontFamily="@font/font_din_medium"
+                        />
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            app:lottie_fileName="loadcar.json"
+            app:lottie_autoPlay="true"
+            app:lottie_speed="1.5"
+            app:lottie_loop="false"
+            android:visibility="visible"
+            android:background="@color/white_text_color"
+            android:id="@+id/loading_car_animation"
+            android:layout_below="@id/action_bar_select_a_car"/>
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

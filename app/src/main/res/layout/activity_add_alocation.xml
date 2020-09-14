@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddALocation">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="93dp"
+        tools:layout_editor_absoluteY="-87dp">
+
+        <Button
+            android:id="@+id/save_button_add_a_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_for_your_car_desc_edit_text"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/colorSecondary"
+            android:fontFamily="@font/font_din_bold"
+            android:padding="10dp"
+            android:text="@string/save"
+            android:textColor="@color/white_text_color"
+            android:transitionName="button_make_a_booking_add_a_location" />
+
+          <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/Enter_a_location_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/action_bar_add_a_location"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/font_din_medium"
+            android:textColor="@color/black_000000"
+            android:hint="@string/enter_your_location"
+            android:inputType="textPostalAddress"
+            app:met_floatingLabel="normal"
+            app:met_underlineColor="@color/colorSecondary"
+            app:met_floatingLabelAnimating="true"
+            app:met_floatingLabelTextColor="@color/colorSecondary"
+            app:met_floatingLabelText="Location" />
+       <!-- <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/label_for_your_car_label_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Enter_a_location_edit_text"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/font_din_medium"
+            android:hint="@string/choose_a_label_for_your_location"
+            android:inputType="text"
+            android:textColor="@color/black_000000"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelAnimating="true"
+            app:met_floatingLabelText="Label of your location"
+            app:met_floatingLabelTextColor="@color/colorSecondary"
+            app:met_underlineColor="@color/colorSecondary" />-->
+
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            android:id="@+id/label_for_your_car_label_edit_text"
+            android:layout_width="match_parent"
+
+            android:layout_below="@id/Enter_a_location_edit_text"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/font_din_medium"
+            android:layout_height="wrap_content"/>
+       <!-- <fragment
+            android:id="@+id/Enter_a_location_edit_text"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/action_bar_add_a_location"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/font_din_medium"
+            android:hint="@string/enter_your_location"
+            android:textColor="@color/black_000000" />-->
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/label_for_your_car_desc_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_for_your_car_label_edit_text"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/font_din_medium"
+            android:hint="@string/choose_a_desc_for_your_location"
+            android:inputType="text"
+            android:textColor="@color/black_000000"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelAnimating="true"
+            app:met_floatingLabelText="Description of your location"
+            app:met_floatingLabelTextColor="@color/colorSecondary"
+            app:met_underlineColor="@color/colorSecondary" />
+
+
+        <include
+            layout="@layout/layout_action_bar_add_a_location"
+            android:layout_width="match_parent"
+            android:layout_height="62dp" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item
+        android:checked="true"
+        android:id="@+id/home_navigation_home"
+        android:title="@string/home"
+        android:icon="@drawable/burger_home"
+        />
+    <item
+        android:id="@+id/book_navigation_home"
+        android:title="@string/make_a_booking"
+        android:onClick="Make_a_booking_from_home"
+        android:icon="@drawable/burger_book"/>
+    <item
+        android:id="@+id/calender_navigation_home"
+        android:title="@string/my_bookings"
+        android:icon="@drawable/burger_calendar"/>
+    <item
+        android:id="@+id/account_navigation_home"
+        android:title="@string/my_account"
+        android:onClick="Account_Activity_from_home"
+        android:icon="@drawable/burger_account"/>
+    <item
+        android:id="@+id/help_navigation_home"
+        android:title="@string/help"
+        android:icon="@drawable/burger_help"
+        android:onClick="Help_from_home"/>
+
+</menu>

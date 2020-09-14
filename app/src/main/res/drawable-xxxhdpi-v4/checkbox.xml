@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_check_box_black_24dp" android:state_checked="true"/>
+    <item android:drawable="@drawable/ic_check_box_outline_blank_black_24dp" android:state_checked="false"/>
+</selector>
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:state_focused="true"
+        android:drawable="@drawable/check_box_checked" />
+    <item android:state_checked="false" android:state_focused="true"
+        android:drawable="@drawable/check_box_unchecked" />
+    <item android:state_checked="false"
+        android:drawable="@drawable/check_box_unchecked" />
+    <item android:state_checked="true"
+        android:drawable="@drawable/check_box_checked" />
+</selector>-->

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_help_drawer_layout"
+    tools:context=".HelpActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/backgound_activities">
+
+        <include
+            android:id="@+id/action_bar_help"
+            layout="@layout/action_bar_navigation"
+            android:layout_height="62dp"
+            android:layout_width="match_parent"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/action_bar_help"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/knowledge_base_option"
+                android:textSize="18sp"
+                android:background="@color/white_text_color"
+                android:clickable="true"
+                android:text="@string/knowledge_base"
+                android:fontFamily="@font/font_din_medium"
+                android:paddingBottom="23dp"
+                android:paddingTop="23dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:focusable="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/backgound_activities"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/live_chat_option"
+                android:background="@color/white_text_color"
+                android:textSize="18sp"
+                android:clickable="true"
+                android:text="@string/live_chat"
+                android:fontFamily="@font/font_din_medium"
+                android:paddingBottom="23dp"
+                android:paddingTop="23dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:focusable="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/backgound_activities"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/contact_us_option"
+                android:textSize="18sp"
+                android:background="@color/white_text_color"
+                android:clickable="true"
+                android:text="@string/contact_us"
+                android:fontFamily="@font/font_din_medium"
+                android:paddingBottom="23dp"
+                android:paddingTop="23dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:focusable="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/backgound_activities"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/call_us_option"
+                android:textSize="18sp"
+                android:background="@color/white_text_color"
+                android:clickable="true"
+                android:text="@string/call_us"
+                android:fontFamily="@font/font_din_medium"
+                android:paddingBottom="23dp"
+                android:paddingTop="23dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:focusable="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/backgound_activities"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/legal_option"
+                android:textSize="18sp"
+                android:clickable="true"
+                android:background="@color/white_text_color"
+                android:text="@string/legal"
+                android:fontFamily="@font/font_din_medium"
+                android:paddingBottom="23dp"
+                android:paddingTop="23dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:focusable="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/backgound_activities"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/activity_help_nav_view"
+        android:layout_width="310dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/navigation_background"
+        android:layout_gravity="start"
+        android:theme="@style/drawerStyle"
+        app:itemIconTint="@drawable/navigation_bar_text_color"
+        app:itemTextColor="@drawable/navigation_bar_text_color"
+        app:headerLayout="@layout/navigation_bar_header_layout_unnamed"
+        app:menu="@menu/navigation_menu_activity_help">
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
